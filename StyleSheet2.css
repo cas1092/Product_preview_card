@@ -1,0 +1,153 @@
+﻿
+
+:root {
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Darkercyan: hsl(158, 36%, 25%);
+}
+
+@font-face {
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: "Monserrat";
+}
+
+@font-face {
+    src: url(fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf);
+    font-family: Fraunces;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5vh;
+}
+.card {
+    display: grid;
+    grid-auto-flow: row;
+    background-color: var(--White);
+    border-radius: 0.5rem;
+    overflow:hidden;
+}
+
+img_card {
+    display: block;
+    border-radius: 0.8rem;
+}
+img {
+    max-width: 100%;
+    object-fit: contain;
+    resize:both;
+}
+
+.container {
+    
+    display:flex;
+    flex-direction:column;
+    padding: 1.2rem;
+    justify-content:space-evenly;
+    
+}
+.ribbon{
+    text-transform: uppercase;
+    color: var(--Darkgrayishblue);
+    font-family: Monserrat;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+h1 {
+    font-family: Fraunces;
+    color: var(--Verydarkblue);
+    font-weight: 700;
+}
+
+.text {
+    color: var(--Darkgrayishblue);
+    font-family: Monserrat;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border: 0;
+}
+
+span {
+    font-family: Fraunces;
+    color: var(--Darkcyan);
+    font-weight: 700;
+    font-size: 2rem;
+    
+}
+
+s {
+    color: var(--Darkgrayishblue);
+    font-family: Monserrat;
+    font-weight: 500;
+    font-size: 14px;
+}
+.btn {
+    background-color: var(--Darkcyan);
+    border-radius: 8px;
+    color: var(--White);
+    padding: 1.2rem 0;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: Monserrat;
+    
+}
+.btn:hover {
+    background-color: var(--Darkercyan);
+    border-radius: 8px;
+    color: var(--White);
+    padding: 1.2rem 0;
+    font-weight: 700;
+    text-align: center;
+    cursor:pointer;
+}
+
+@media screen and (min-width: 27rem) {
+    .card {
+        display: grid;
+        grid-auto-flow: column;
+        background-color: var(--White);
+        border-radius: 0.8rem;
+        grid-template-columns: 20rem 20rem;
+        max-width: 40rem;
+        overflow: hidden;
+    }
+    img {
+        
+        object-fit: contain;
+    }
+   
+
+   
+
+    body {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin: 20vh auto;
+    }
+}
+    
